@@ -8,9 +8,9 @@ import {
 } from "../services/taskService";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import styles from "./css/TaskPage.module.css";
+import styles from "./css/TaskList.module.css";
 
-const TaskPage = () => {
+const TaskList = () => {
   const queryClient = useQueryClient();
   const { data: tasks, isLoading, isError } = useQuery("tasks", getTasks);
 
@@ -146,4 +146,4 @@ const TaskPage = () => {
   );
 };
 
-export default TaskPage;
+export default TaskList;

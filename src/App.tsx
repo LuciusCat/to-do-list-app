@@ -11,7 +11,6 @@ import HomePage from "./pages/HomePage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import NotFoundPage from "./pages/NotFoundPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
-import TaskPage from "./pages/TaskPage";
 
 const queryClient = new QueryClient();
 
@@ -29,14 +28,6 @@ function App() {
               element={
                 <ProtectedRoute>
                   <HomePage />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/tasks"
-              element={
-                <ProtectedRoute>
-                  <TaskPage />
                 </ProtectedRoute>
               }
             />
