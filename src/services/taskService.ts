@@ -22,8 +22,9 @@ export const deleteTask = async (id: number) => {
   return data;
 };
 
-// Nueva función para marcar tarea como completada
-export const completeTask = async (id: number) => {
-  const { data } = await axios.patch(`${API_URL}/${id}`, { completed: true });
+export const completeTask = async (task: any) => {
+  const { data } = await axios.patch(`${API_URL}/${task.id}`, {
+    completed: !task.completed,
+  });
   return data;
 };
