@@ -1,10 +1,9 @@
-import TaskPage from "../components/TaskList";
+import TaskListForm from "../components/TaskListForm";
 
 export default function HomePage() {
   return (
     <div>
-      <h1>Home Page</h1>
-      <TaskPage />
+      <TaskListForm />
     </div>
   );
 }

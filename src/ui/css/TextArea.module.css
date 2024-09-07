@@ -1,0 +1,9 @@
+.textArea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  overflow: auto;
+  outline: none;
+  max-height: 200px;
+  min-height: 40px;
+}
