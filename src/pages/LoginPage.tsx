@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "./css/LoginPage.module.css";
+import Button from "../ui/Button";
+import Input from "../ui/InputField";
+import Label from "../ui/Label";
+import inputStyles from "../ui/css/InputField.module.css";
+import buttonStyles from "../ui/css/Button.module.css";
+import formStyles from "./css/Form.module.css";
+import labelStyles from "../ui/css/Label.module.css";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -16,11 +22,14 @@ const LoginPage = () => {
   };
 
   return (
-    <section className={styles.form}>
+    <section className={formStyles.form}>
       <h2>Iniciar Sesión</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Ingrese su correo electrónico: </label>
-        <input
+        <Label className={labelStyles.label} htmlFor="email">
+          Ingrese su correo electrónico:{" "}
+        </Label>
+        <Input
+          className={inputStyles.input}
           type="email"
           id="email"
           placeholder="Correo electrónico"
@@ -29,8 +38,11 @@ const LoginPage = () => {
           required
         />
 
-        <label htmlFor="password">Ingrese su contraseña: </label>
-        <input
+        <Label className={labelStyles.label} htmlFor="password">
+          Ingrese su contraseña:{" "}
+        </Label>
+        <Input
+          className={inputStyles.input}
           type="password"
           id="password"
           placeholder="Contraseña"
@@ -38,10 +50,12 @@ const LoginPage = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Iniciar Sesión</button>
-        <button>
+        <Button className={buttonStyles.button__addTask} type="submit">
+          Iniciar Sesión
+        </Button>
+        <Button className={buttonStyles.button__addTask}>
           <Link to="/forgot-password">Recuperar contraseña</Link>
-        </button>
+        </Button>
       </form>
     </section>
   );

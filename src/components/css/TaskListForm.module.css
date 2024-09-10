@@ -4,12 +4,13 @@
   flex-direction: column;
   padding: 1rem;
   gap: 1rem;
-  border: 1px solid #ccc;
   width: fit-content;
   margin-inline: auto;
+  background-color: var(--darkgray-color);
 
   h2 {
     font-size: x-large;
     font-weight: bold;
+    color: var(--white-color);
   }
 }

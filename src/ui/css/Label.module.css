@@ -1,0 +1,4 @@
+.label {
+  font-size: var(--text-responsive);
+  font-family: var(--inter-font);
+}

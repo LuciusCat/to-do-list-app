@@ -1,0 +1,6 @@
+body {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  display: grid;
+  place-content: center;
+}

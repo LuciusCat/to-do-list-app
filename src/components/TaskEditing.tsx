@@ -58,10 +58,16 @@ const TaskEditing = ({
             }
           />
           <div>
-            <Button className={buttonStyles.button} onClick={handleSave}>
+            <Button
+              className={buttonStyles.button__complete}
+              onClick={handleSave}
+            >
               Guardar cambios
             </Button>
-            <Button className={buttonStyles.button} onClick={onCancelEdit}>
+            <Button
+              className={buttonStyles.button__delete}
+              onClick={onCancelEdit}
+            >
               Cancelar
             </Button>
           </div>

@@ -1,4 +1,13 @@
 .input {
-  border: 1px solid #ccc;
+  border: 1px solid var(--lemon-color);
+  color: var(--white-color);
   padding: 10px;
+  &::placeholder {
+    color: var(--lemon-color);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--lemon-color);
+  }
 }

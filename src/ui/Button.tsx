@@ -1,11 +1,12 @@
 type ButtonProps = {
   className: string;
-  onClick: () => void;
+  onClick?: () => void;
   children: React.ReactNode;
+  type?: "submit" | "reset" | "button" | undefined;
 };
 
-const Button = ({ className, onClick, children }: ButtonProps) => (
-  <button onClick={onClick} className={className}>
+const Button = ({ className, onClick, children, type }: ButtonProps) => (
+  <button type={type} onClick={onClick} className={className}>
     {children}
   </button>
 );

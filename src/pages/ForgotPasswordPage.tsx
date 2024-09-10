@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "./css/LoginPage.module.css";
+import { Button, InputField } from "../ui";
+import formStyles from "./css/Form.module.css";
+import inputStyles from "../ui/css/InputField.module.css";
+import buttonStyels from "../ui/css/Button.module.css";
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState("");
@@ -11,22 +14,25 @@ const ForgotPasswordPage = () => {
   };
 
   return (
-    <div className={styles.form}>
+    <section className={formStyles.form}>
       <h2>Recuperar Contraseña</h2>
       <form onSubmit={handleSubmit}>
-        <input
+        <InputField
+          className={inputStyles.input}
           type="email"
           placeholder="Correo electrónico"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <button type="submit">Enviar correo de recuperación</button>
-        <button>
+        <Button className={buttonStyels.button__addTask} type="submit">
+          Enviar correo de recuperación
+        </Button>
+        <Button className={buttonStyels.button__addTask}>
           <Link to="/">Ir al inicio de Sesión</Link>
-        </button>
+        </Button>
       </form>
-    </div>
+    </section>
   );
 };
 

@@ -1,15 +1,21 @@
 .button {
   cursor: pointer;
   padding: 5px 10px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  font-size: var(--text-responsive);
 }
 
 .button__addTask {
   composes: button;
   background-color: hsla(133, 100%, 40%, 10%);
-  color: rgb(46, 214, 83);
-  border-color: #2ed653;
+  color: var(--white-color);
+  background-color: var(--gray-color);
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: var(--lemon-color);
+    color: var(--darkgray-color);
+  }
 }
 
 .button__update {
